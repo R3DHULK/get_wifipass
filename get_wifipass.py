@@ -4,7 +4,7 @@ import re
 from collections import namedtuple
 import configparser
 
-print ('''
+print ('''\033[93m
     ***************************************************************
     *    ___     _ __      ___  __ _ ___                          *
     *   / __|___| |\ \    / (_)/ _(_) _ \__ _ ______              *
@@ -70,7 +70,7 @@ def print_windows_profile(profile):
 
 def print_windows_profiles(verbose):
     """Prints all extracted SSIDs along with Key on Windows"""
-    print("SSID                     CIPHER(S)      KEY")
+    print("\033[94m SSID                     CIPHER(S)      KEY")
     get_windows_saved_wifi_passwords(verbose)
 
 
@@ -120,7 +120,7 @@ def print_profiles(verbose=1):
     else:
         raise NotImplemented("Code only works for either Linux or Windows")
     
-print ('''
+print ('''\033[91m
        
     ***************************************************************
     *                                                             *
@@ -132,7 +132,7 @@ print ('''
     *                                                             *
     ***************************************************************   
        ''')    
-print ('''
+print ('''\033[92m
        [*] Hulk starts to catch ssid   cipher and key ...
        
        [!] Hulk came up with :::
@@ -140,3 +140,4 @@ print ('''
 if __name__ == "__main__":
     print_profiles()
 input("Enter To Continue")
+
